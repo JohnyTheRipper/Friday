@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+  
+  <h1>Friday</h1>
 
-<h1>Friday</h1>
+  <button onclick="typeWriter()">Begin</button>
 
-<button onclick="typeWriter()">Begin</button>
+  <p id="friday"></p>
 
-<p id="demo"></p>
+  <script>
+  var i = 0;
+  var txt = 'What Time is it?';
+  var speed = 50;
 
-<script>
-var i = 0;
-var txt = 'What Time is it?';
-var speed = 50;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("friday").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
   }
-}
-</script>
+  </script>
 
-</body>
+  </body>
 </html>
